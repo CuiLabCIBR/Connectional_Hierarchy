@@ -24,7 +24,7 @@ feature_df = pd.DataFrame(index=ids, columns=feature_names, data=feature_data)
 # Add features to dataset
 dataset.add_features(feature_df,duplicates = 'ignore')
 dataset.save(file_path + 'cognitive_atlas/dataset.pkl')
-# dataset = Dataset.load('dataset.pkl') # We can skip the above steps load the dataset next time
+# dataset = Dataset.load('dataset.pkl') # We can skip the above steps and load the dataset directly next time
 
 base_dir = file_path + 'cognitive_atlas/images'
 out_dir = os.path.abspath(file_path + 'cognitive_atlas')
