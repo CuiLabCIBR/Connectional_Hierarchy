@@ -1,8 +1,6 @@
-# 123 cognitive terms were selected from the Cognitive Atlas (https://www.cognitiveatlas.org/)
-# following the previous study (Hansen, 2021).
+# 123 cognitive terms were selected from the Cognitive Atlas (https://www.cognitiveatlas.org/), following the previous study (Hansen, 2021).
 # Hansen, J. Y., Markello, R. D., Vogel, J. W., Seidlitz, J., Bzdok, D., & Misic, B. (2021). 
 # Mapping gene transcription and neurocognition across human neocortex. Nature Human Behaviour, 5(9), 1240-1250.
-
 
 from neurosynth import Dataset
 from neurosynth import meta
