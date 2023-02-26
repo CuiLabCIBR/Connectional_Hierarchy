@@ -12,21 +12,32 @@ from scipy import sparse
 import os
 
 file_path = 'F:/Cui_Lab/Projects/Connectional_Hierarchy/step_07_cognitive_similarity_network/'
+# Create a new Dataset instance
 dataset = Dataset(file_path + 'cognitive_atlas/database.txt')
+
+# Reconstruct the feature data into a spreadsheet-like format
 feature_data_sparse = sparse.load_npz(file_path + 'cognitive_atlas/data-neurosynth_version-7_vocab-terms_source-abstract_type-tfidf_features.npz')
 feature_data = feature_data_sparse.todense()
 metadata_df = pd.read_table(file_path + 'cognitive_atlas/data-neurosynth_version-7_metadata.tsv.gz')
 ids = metadata_df['id'].tolist()
 feature_names = np.genfromtxt(file_path + 'cognitive_atlas/data-neurosynth_version-7_vocab-terms_vocabulary.txt', dtype=str, delimiter='/t').tolist()
 feature_df = pd.DataFrame(index=ids, columns=feature_names, data=feature_data)
+
+# Add features to dataset
 dataset.add_features(feature_df,duplicates = 'ignore')
 dataset.save(file_path + 'cognitive_atlas/dataset.pkl')
+# dataset = Dataset.load('dataset.pkl') # We can skip the above steps load the dataset next time
+
 base_dir = file_path + 'cognitive_atlas/images'
 out_dir = os.path.abspath(file_path + 'cognitive_atlas')
 os.makedirs(out_dir, exist_ok=True)
+
+# Load the 123 cognitive terms we used in this work
 cognitive_atlas = pd.read_csv(file_path + 'cognitive_atlas/cognitive_atlas.csv') # 123 cognitive terms
 selected_term = cognitive_atlas['cognitive_terms'].to_list()
+
 for term in selected_term:
+    # Run a meta-analysis based on the selected term
     ids = dataset.get_studies(features=term)
     ma = meta.MetaAnalysis(dataset, ids)
     output_dir = os.path.join(base_dir,term)
