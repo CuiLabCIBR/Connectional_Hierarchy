@@ -41,5 +41,5 @@ ggsave(paste0(working_dir,'gam_age_heterogeneity.png'),plot=Fig,width = 10,heigh
 
 ####################################################
 # Calculate the partial correlation to represent effect size
-Age_Heterogeneity_cor <- pcor(HCPD_Heterogeneity, method = "spearman")
+Age_Heterogeneity_cor <- pcor(HCPD_Heterogeneity, method = "pearson")
 r <- Age_Heterogeneity_cor$estimate[1,4]
