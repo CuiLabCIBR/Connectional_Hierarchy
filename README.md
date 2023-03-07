@@ -26,7 +26,7 @@ Data and codes for our paper **"Connectional Hierarchy in Human Brain Revealed b
 The [functions](functions/) folder contains codes/functions and files that are called frequently in `code`.
 
 ## `wiki`
-The detailed description about the codes used in this study, from `step_01_individual_fc_variability` to `step_09_developments_of_connectional_hierarchy`, can be found [here](/) (to be edited).
+The detailed description about the codes used in this study, from `step_01_individual_fc_variability` to `step_09_developments_of_connectional_hierarchy`, can be found [here](https://github.com/CuiLabCIBR/Connectional_Hierarchy/wiki).
 
 ## `note`
 The current repository does include codes and data used in the supplementary analyses (control the *Euclidean distance*), these will be added in the near future. The FC matrices for HCP-D and HCP-YA have not been uploaded due to the single file size limitation.
