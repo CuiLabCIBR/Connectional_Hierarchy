@@ -1,7 +1,7 @@
 # Connectional_Hierarchy
 Data and codes for our paper **"Connectional Hierarchy in Human Brain Revealed by Individual Variability of Functional Network Edges"**.
 
-*Inter-individual fc variability* matrices for both **HCP-D** and **HCP-YA** (typically referred as **'HCP'**), and the network of *hemodynamic connectivity*, *electromagnetic connectivity*, *white matter structural connectivity*, *correlated gene expression*, *receptor similarity* and *cognitive similarity* and *disorder similarity* are obtained using `Schaefer-400` (7 Networks order); the network of *disorder similarity* are obtained using `Cammoun-033`/`Desikan-Killiany` (68 cortical regions in different order) . See [data](data/) for more details.
+*Inter-individual fc variability* matrices for both **HCP-D** and **HCP-YA** (typically referred as **'HCP'**), and the network of *hemodynamic connectivity*, *electromagnetic connectivity*, *white matter structural connectivity*, *correlated gene expression*, *receptor similarity* and *cognitive similarity* are obtained using `Schaefer-400` (7 Networks order); the network of *disorder similarity* are obtained using `Cammoun-033`/`Desikan-Killiany` (68 cortical regions in different order) . See [data](data/) for more details.
 
 ## `data`
 - The [sub_info](data/sub_info) folder contains the subject information (`sub_id`,`age` and `gender`) used in this study.
