@@ -23,7 +23,7 @@ Data and codes for our paper **"Connectional Hierarchy in Human Brain Revealed b
 - The [step_09_developments_of_connectional_hierarchy](step_09_developments_of_connectional_hierarchy/) folder contains codes to generate results and figures of *Figure 8. Development of connectional hierarchy in youth*.
 
 ## `functions`
-The [functions](functions/) folder contains codes/functions and files that are called frequently in `code`.
+The [functions](functions/) folder contains code and files commonly used in `code`.
 
 ## `wiki`
 The detailed description about the codes used in this study, from `step_01_individual_fc_variability` to `step_09_developments_of_connectional_hierarchy`, can be found [here](https://github.com/CuiLabCIBR/Connectional_Hierarchy/wiki).
